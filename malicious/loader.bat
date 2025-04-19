@@ -1,1 +1,2 @@
-mspaint.exe
+@echo off
+start mspaint

